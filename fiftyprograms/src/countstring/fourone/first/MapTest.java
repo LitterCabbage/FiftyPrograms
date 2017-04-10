@@ -3,6 +3,13 @@ package countstring.fourone.first;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 获取字符串中字母出现的次数
+ *
+ * @author  axingxing
+ *
+ * 2017年4月10日  下午3:46:14
+ */
 public class MapTest {
 
 	public static void main(String[] args) {
