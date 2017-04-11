@@ -1,4 +1,4 @@
-package countstring.fourone.first;
+package com.fourone.first;
 
 import java.util.HashMap;
 import java.util.Iterator;
