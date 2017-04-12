@@ -3,12 +3,12 @@ package com.seven.second;
 import java.util.Scanner;
 
 /**
- * 题目：输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数。
+ * 题目：输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数。 
  * 程序分析：利用while语句,条件为输入的字符不为'\n'.
  *
- * @author  axingxing
+ * @author axingxing
  *
- * 2017年4月11日  下午6:22:17
+ *         2017年4月11日 下午6:22:17
  */
 public class Statistic {
 
