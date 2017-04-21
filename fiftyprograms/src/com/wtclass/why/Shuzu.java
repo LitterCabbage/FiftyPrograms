@@ -13,35 +13,9 @@ public class Shuzu {
 		// if()
 		// }
 		// }
-		//
-		PrimeNumber_1();
+		
 	}
-
-	//
-	private static void PrimeNumber_1() {
-		int count = 0;
-		int sum = 0;
-		boolean isPrimeNunber = true;
-		for (int i = 2; i < 10000; i++) {
-
-			for (int j = 2; j <= i / 2; j++) {
-				if (i % j == 0) {
-
-					j = i;
-
-					isPrimeNunber = false;
-				}
-			}
-
-			if (isPrimeNunber) {
-				count++;
-				System.out.println(i + "为第" + count + "个素数");
-				// sum = sum + i;
-			}
-			isPrimeNunber = true;
-		}
-		// System.out.println("10000以内素数之和"+sum);
-	}
+	
 
 	// char[] ch ={'a','b','c','d','e'};
 	//
@@ -54,25 +28,6 @@ public class Shuzu {
 	// }
 	// }
 	// }
-
-	private static void Sushu() {
-		// 只能用100
-		for (int i = 2; i < 100; i++) {
-			for (int j = 2; j <= i; j++) {
-				if (i % j == 0) {
-					if (j < i) {
-						break;
-					}
-					if (j == i) {
-						System.out.print(i + " ");
-					}
-
-				}
-			}
-
-		}
-		// return i.toString;
-	}
 
 	/**
 	 * 暴力法，计算出连续子元素的最大和
