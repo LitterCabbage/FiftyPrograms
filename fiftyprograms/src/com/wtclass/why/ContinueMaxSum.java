@@ -18,14 +18,11 @@ public class ContinueMaxSum {
 	 * 
 	 * @param a
 	 */
-	public static void subSum(int[] a) {
-		int sum = 0;
-		int start = 0;
+	public static void subSum(int[] a) {	
 		for (int i = 0; i < a.length; i++) {// 代表计算的起点
-			start = a[i];
+			int sum = a[i];
 			for (int j = i + 1; j < a.length; j++) {// 要开始取后面的连续
-				sum = start + a[j];
-				start = sum;
+				sum = sum + a[j];
 				System.out.print(sum + " ");
 			}
 			System.out.println();
