@@ -7,7 +7,7 @@ import java.math.BigInteger;
  *
  * @author anxingxing
  *
- *         2017年4月21日  下午5:00:02
+ *         2017年4月21日 下午5:00:02
  */
 public class Factorial {
 
@@ -16,46 +16,49 @@ public class Factorial {
 	}
 
 	/**
-	 * 阶乘     递归实现
+	 * 阶乘 递归实现
+	 * 
 	 * @param n
 	 * @return
 	 */
-	public static int mutiply_1(int n){
-		if(n<=1){
+	public static int mutiply_1(int n) {
+		if (n <= 1) {
 			return n;
-		}else{
-			return n*mutiply_1(n-1);
+		} else {
+			return n * mutiply_1(n - 1);
 		}
 	}
-	
+
 	/**
-	 * 阶乘     递归实现   增大数字范围
+	 * 阶乘 递归实现 增大数字范围
+	 * 
 	 * @param n
 	 * @return
 	 */
-	public static BigInteger mutiply_2(int n){
-		if(n<=1){
+	public static BigInteger mutiply_2(int n) {
+		if (n <= 1) {
 			return BigInteger.valueOf(n);
-		}else{
-			return BigInteger.valueOf(n).multiply(mutiply_2(n-1));
+		} else {
+			return BigInteger.valueOf(n).multiply(mutiply_2(n - 1));
 		}
 	}
-	
+
 	/**
-	 * 阶乘     非递归实现
+	 * 阶乘 非递归实现
+	 * 
 	 * @param n
 	 */
-	public static void mutiply_3(int n){
+	public static void mutiply_3(int n) {
 		int sum = 1;
 		for (int i = 1; i <= n; i++) {
-			sum *= i; 
+			sum *= i;
 		}
 		System.out.println(sum);
 	}
-	
-	public static void mutiply_4(int n){
+
+	public static void mutiply_4(int n) {
 		BigInteger sum = BigInteger.valueOf(1);
-		for (int i = 1; i <= n; i++){
+		for (int i = 1; i <= n; i++) {
 			sum = sum.multiply(BigInteger.valueOf(i));
 		}
 		System.out.println(sum.toString());
