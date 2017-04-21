@@ -30,25 +30,6 @@ public class Shuzu {
 	// }
 
 	/**
-	 * 暴力法，计算出连续子元素的最大和
-	 * 
-	 * @param a
-	 */
-	public static void SimpleSubSum(int[] a) {
-		int sum = 0;
-		int start = 0;
-		for (int i = 0; i < a.length; i++) {// 代表计算的起点
-			start = a[i];
-			for (int j = i + 1; j < a.length; j++) {// 要开始取后面的连续
-				sum = start + a[j];
-				start = sum;
-				System.out.print(sum + " ");
-			}
-			System.out.println();
-		}
-	}
-
-	/**
 	 * 找出出现一次的元素 2^10=1024 0(n) 可以找出出现奇数次的元素，但是只有一个这个的元素
 	 * 
 	 * @param a
@@ -59,26 +40,6 @@ public class Shuzu {
 			x ^= a[i];
 		}
 		System.out.println(x);
-	}
-
-	/**
-	 * 数组中的连续子元素最大和 0(n) 线性
-	 * 
-	 * @param a
-	 */
-	private static void maxSum(int[] a) {
-		int thisSum = 0;
-		int maxSum = a[0];
-		for (int j = 0; j < a.length; j++) {
-			thisSum += a[j];
-			if (thisSum > maxSum) {
-				maxSum = thisSum;
-			}
-			if (thisSum < 0) {
-				thisSum = 0;
-			}
-		}
-		System.out.println(maxSum);
 	}
 
 	/**
