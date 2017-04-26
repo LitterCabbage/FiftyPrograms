@@ -1,13 +1,13 @@
-package com.fourone.first;
+package com.math.basic;
 
 import java.util.HashMap;
 import java.util.Map;
 /**
- * map存放字符串，entry获取字符串
+ *  map存放字符串，entry获取字符串
  *
- * @author  axingxing
+ * @author anxingxing
  *
- * 2017年4月10日  下午3:19:19
+ *         2017年4月26日  下午6:34:24
  */
 public class EntryGet {
 

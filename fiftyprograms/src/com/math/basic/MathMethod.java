@@ -1,4 +1,4 @@
-package com.fourone.first;
+package com.math.basic;
 
 import java.util.Scanner;
 

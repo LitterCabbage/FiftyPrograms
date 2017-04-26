@@ -1,4 +1,4 @@
-package com.fourone.first;
+package com.math.basic;
 
 /**
  * 最大的出现次数

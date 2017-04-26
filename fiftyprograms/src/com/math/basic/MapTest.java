@@ -1,4 +1,4 @@
-package com.fourone.first;
+package com.math.basic;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 获取字符串中字母出现的次数
  *
- * @author  axingxing
+ * @author  anxingxing
  *
  * 2017年4月10日  下午3:46:14
  */

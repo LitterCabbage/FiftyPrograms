@@ -1,4 +1,4 @@
-package com.seven.second;
+package com.oop.practice;
 
 import java.util.Scanner;
 

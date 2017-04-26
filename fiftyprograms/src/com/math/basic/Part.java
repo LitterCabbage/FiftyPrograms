@@ -1,4 +1,4 @@
-package com.fourone.first;
+package com.math.basic;
 
 /**
  * 将一个正整数分解质因数。例如：输入90,打印出90=2*3*3*5。
