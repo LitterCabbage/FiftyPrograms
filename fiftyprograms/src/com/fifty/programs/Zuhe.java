@@ -1,4 +1,4 @@
-package com.math.basic;
+package com.fifty.programs;
 
 /**
  * 有1、2、3、4个数字，

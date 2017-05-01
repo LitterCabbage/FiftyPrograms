@@ -1,4 +1,4 @@
-package com.math.basic;
+package com.fifty.programs;
 
 public class Grade {
 

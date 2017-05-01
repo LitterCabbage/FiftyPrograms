@@ -1,4 +1,4 @@
-package com.math.basic;
+package com.fifty.programs;
 
 /**
  * 最大的出现次数
