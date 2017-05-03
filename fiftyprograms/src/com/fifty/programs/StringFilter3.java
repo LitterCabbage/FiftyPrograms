@@ -1,4 +1,4 @@
-package com.oop.practice;
+package com.fifty.programs;
 
 import java.util.ArrayList;
 import java.util.Collections;

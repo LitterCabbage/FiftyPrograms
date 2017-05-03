@@ -1,4 +1,4 @@
-package com.wtclass.why;
+package com.wtclass.practice;
 
 public class PrimeNumber {
 

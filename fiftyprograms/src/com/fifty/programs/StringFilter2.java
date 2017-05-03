@@ -1,4 +1,4 @@
-package com.oop.practice;
+package com.fifty.programs;
 
 public class StringFilter2 {
 

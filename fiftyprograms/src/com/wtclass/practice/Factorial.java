@@ -1,4 +1,4 @@
-package com.wtclass.why;
+package com.wtclass.practice;
 
 import java.math.BigInteger;
 

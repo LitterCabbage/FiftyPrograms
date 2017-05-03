@@ -1,4 +1,4 @@
-package com.oop.practice;
+package com.fifty.programs;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
