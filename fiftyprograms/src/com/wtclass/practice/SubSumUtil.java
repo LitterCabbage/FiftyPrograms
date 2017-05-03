@@ -9,14 +9,10 @@ package com.wtclass.practice;
  */
 public class SubSumUtil {
 	public static void main(String[] args) {
-		int[] a = { 1,-5,3,4,2};
-//		indexMaxSubSum(a);
+		int[] a = { 1,5,3,4,2};
+//		indexMaxSubSum1(a);
 		subSum(a);
 		indexMaxSubSum2(a);
-		
-		char[] b = {'a', 'b', 'c', 'd', 'e'};
-		
-		sub(b);
 	}
 
 	/**
@@ -120,29 +116,6 @@ public class SubSumUtil {
 	}
 	
 	/**
-	 * 连续的字符串组合
-	 * @param a
-	 */
-	private static void sub(char[] a) {
-		String t  = new String();
-		for (int i = 0; i < a.length; i++) {
-			t+= a[i];
-		}
-//		System.out.println(t);
-		int c = 0;
-		StringBuffer sb = new StringBuffer(t);
-		for (int i = 0; i < a.length; i++) {
-			for (int j = i; j < a.length; j++) {
-				String s = sb.substring(i, j+1);
-				++c;
-				System.out.print(s+" ");
-			}
-			System.out.println();
-		}
-		System.out.println("总数       "+c);
-		
-	}
-	/**
 	 * 最大连续子元素和的位置索引  0(n)
 	 * 
 	 * @param a
@@ -171,11 +144,14 @@ public class SubSumUtil {
 		System.out.println("最大连续子元素和的结束位置：" + end);
 	}
 	
+	/**
+	 * 最大连续子元素和的位置索引  0(n*n)
+	 * @param a 数组
+	 */
 	public static void indexMaxSubSum2(int[] a) {
 		int maxSum = 0;
 		int start = 0;
 		int end = 0;
-		int point = 1;
 		for (int i = 0; i < a.length; i++) {// 代表计算的起点
 			int thisSum = a[i];
 			for (int j = i + 1; j < a.length; j++) {// 要开始取后面的连续
@@ -183,12 +159,10 @@ public class SubSumUtil {
 				if (thisSum > maxSum) {
 					maxSum = thisSum;
 					end = j;
-//					start = start >= point ? start : point;
 					start = i;
 				}
 				if(thisSum < 0){
 					thisSum = 0;
-//					point = j+1;
 				}
 			}
 		}
