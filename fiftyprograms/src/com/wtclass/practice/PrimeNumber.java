@@ -1,12 +1,66 @@
 package com.wtclass.practice;
 
+import java.util.Arrays;
+
 public class PrimeNumber {
 
 	public static void main(String[] args) {
-
-		inPrime(2);
+//		inPrime_1(4);
+		selectPrime(8);
+		getPrime_2(8);
 	}
-
+	/**
+	 * 作标记筛选法
+	 * @param n
+	 */
+	public static void selectPrime(int n){
+		boolean[]  bo = new boolean[n+1];
+		//把0到n+1都标记为true？
+		for (int i = 2; i < bo.length; i++) {
+			bo[i]=true;//初始化bo数组，如果这的初始化不要，可以反着使用，直接使前两个为true
+		}
+		System.out.println(Arrays.toString(bo));
+		for (int i = 2; i * i <= n; i++) {
+			if(bo[i]){
+				for (int j = i*2; j <= n; j += i) {
+					bo[j] = false;
+				}
+			}
+		}
+		//输出质数
+		for (int k = 0; k < bo.length; k++) {
+		     if(bo[k]){	
+		    	 System.out.println(k);
+		     }
+		}
+	}
+	
+	/**
+	 * 筛选法，求n以内的最大质数
+	 * @param n
+	 */
+	public static void getPrime_2(int n) {
+		//用布尔数组，减小占用内存
+		boolean[] boo = new boolean[n+1];
+		for (int i = 2; i < boo.length; i++) {
+			boo[i] = true;
+		}
+		System.out.println(Arrays.toString(boo));
+		
+		for (int i = 2; i * i <= n; i++) {
+			if(boo[i]){//如果没有if，标记的次数会变很多
+				for (int j = i*2; j <= n; j += i) {
+					boo[j] = false;
+				}
+			}
+		}
+		for (int k = 0; k < boo.length; k++) {
+			if(boo[k]){
+				System.out.println(k);
+			}
+		}
+	}
+	
 	/**
 	 * 求第n个数是否为质数
 	 * 
@@ -38,7 +92,7 @@ public class PrimeNumber {
 			// n范围内最大的，所以从n开始往小的判断
 			for (int i = n; i > 0; n--) {
 				if (isPrime(n)) {
-					System.out.println(n + "是" + range + "范围内最大质数");
+					System.out.println(n + "是"+range+"范围内最大的质数");
 					break;
 				}
 			}

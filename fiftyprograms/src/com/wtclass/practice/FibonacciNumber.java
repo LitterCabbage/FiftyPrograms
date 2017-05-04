@@ -10,7 +10,7 @@ public class FibonacciNumber {
 	}
 
 	/**
-	 * 列出斐波那契数列的前n项，并计算前n项和
+	 * 斐波那契数列的前n项及前n项和
 	 * 
 	 * @param n
 	 */
@@ -28,7 +28,7 @@ public class FibonacciNumber {
 	}
 
 	/**
-	 * 求第n个斐波那契数 递归
+	 * 斐波那契数 递归 求第n个
 	 * 
 	 * @param n
 	 *            大于0的整数
@@ -43,7 +43,7 @@ public class FibonacciNumber {
 	}
 
 	/**
-	 * 求第n个斐波那契数 三目运算
+	 * 斐波那契数 三目运算 求第n个
 	 * 
 	 * @param n
 	 *            大于0的整数
@@ -54,7 +54,7 @@ public class FibonacciNumber {
 	}
 
 	/**
-	 * 求第n个斐波那契数 非递归
+	 * 斐波那契数 非递归 求第n个
 	 * 
 	 * @param n
 	 *            大于0的整数

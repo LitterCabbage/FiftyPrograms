@@ -56,6 +56,11 @@ public class Factorial {
 		System.out.println(sum);
 	}
 
+	/**
+	 * 阶乘 非递归实现 增大数字范围
+	 * 
+	 * @param n
+	 */
 	public static void mutiply_4(int n) {
 		BigInteger sum = BigInteger.valueOf(1);
 		for (int i = 1; i <= n; i++) {

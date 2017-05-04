@@ -10,9 +10,14 @@ package com.wtclass.practice;
 public class SubSumUtil {
 	public static void main(String[] args) {
 		int[] a = { 1,5,3,4,2};
-//		indexMaxSubSum1(a);
+		
 		subSum(a);
+		maxSubSum(a);
+		maxSubSum_1(a);
+		maxSubSum_2(a);
+		maxSubSum_3(a);
 		indexMaxSubSum2(a);
+		indexMaxSubSum1(a);
 	}
 
 	/**
@@ -158,8 +163,8 @@ public class SubSumUtil {
 				thisSum += a[j];
 				if (thisSum > maxSum) {
 					maxSum = thisSum;
-					end = j;
 					start = i;
+					end = j;
 				}
 				if(thisSum < 0){
 					thisSum = 0;
