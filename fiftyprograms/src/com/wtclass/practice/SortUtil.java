@@ -14,15 +14,15 @@ public class SortUtil {
 	public static void main(String[] args) {
 
 		int[] a = { 3, 2, 5, 4, 1 };
-//		reserve(a);
-//		search(a, 3);
-//		shuffle(a);
-//		quickSort(a);
-//		System.out.println(Arrays.toString(a));
-		
-//		int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		// reserve(a);
+		// search(a, 3);
+		// shuffle(a);
+		// quickSort(a);
+		// System.out.println(Arrays.toString(a));
+
+		// int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		// binarySearch(b,10);
-//		shuffle_wt(b);
+		// shuffle_wt(b);
 	}
 
 	/**
@@ -32,41 +32,51 @@ public class SortUtil {
 	 *            数组
 	 */
 	public static void quickSort(int[] a) {
-		  sort(a,0,a.length-1);
+		sort(a, 0, a.length - 1);
 	}
+
 	private static void sort(int[] n, int lo, int hi) {
-		
+
 		if (lo >= hi) {
 			return;
 		}
 		int p = partition(n, lo, hi);
-		//小于基准
+		// 小于基准
 		sort(n, lo, p - 1);
-		//大于基准
+		// 大于基准
 		sort(n, p + 1, hi);
-		
+
 	}
-	
+
 	/**
 	 * 第一个元素（或最后一个元素） 作为基准
-	 * @param n  数组
-	 * @param lo 最小下标
-	 * @param hi 最大下标
-	 * @return  合适的轴（基准的合适下标）
+	 * 
+	 * @param n
+	 *            数组
+	 * @param lo
+	 *            最小下标
+	 * @param hi
+	 *            最大下标
+	 * @return 合适的轴（基准的合适下标）
 	 */
-	private static int partition(int[] n, int lo, int hi){
-		//最后一个元素为基准
+	private static int partition(int[] n, int lo, int hi) {
+		// 最后一个元素为基准
 		int base = n[hi];
 		int l = lo;
-		int r = hi-1;
+		int r = hi - 1;
 		while (true) {
-			while (n[l] < base) if(++l > hi) break;
-			while (n[r] > base) if(--r < lo) break;
-			if (l >= r) break;
-			swap (n,l,r);
+			while (n[l] < base)
+				if (++l > hi)
+					break;
+			while (n[r] > base)
+				if (--r < lo)
+					break;
+			if (l >= r)
+				break;
+			swap(n, l, r);
 		}
-		//找到了轴
-		swap(n,hi,l);
+		// 找到了轴
+		swap(n, hi, l);
 		return l;
 	}
 
@@ -113,7 +123,24 @@ public class SortUtil {
 	 *            数组
 	 */
 	public static void shellSort(int[] a) {
-
+		int d = a.length;
+		while (true) {
+			d = d / 2;
+			for (int x = 0; x < d; x++) {
+				for (int i = x + d; i < a.length; i = i + d) {
+					int temp = a[i];
+					int j;
+					for (j = i - d; j >= 0 && a[j] > temp; j = j - d) {
+						a[j + d] = a[j];
+					}
+					a[j + d] = temp;
+				}
+			}
+			if (d == 1)
+				break;
+		}
+		System.out.println();
+		System.out.println("排序后：" + Arrays.toString(a));
 	}
 
 	/**
@@ -192,7 +219,7 @@ public class SortUtil {
 	public static void shuffle_wt(int[] a) {
 		// 前面任意个元素的索引
 		for (int i = a.length - 1; i > 0; i--) {
-            //将最后一个和索引为r的相交换
+			// 将最后一个和索引为r的相交换
 			int r = (int) (Math.random() * a.length - 1);
 			int t = a[a.length - 1];
 			a[a.length - 1] = a[r];
